@@ -27,3 +27,18 @@ pnpm dev
 ```
 This will start the Next.js application at `http://localhost:3000/`.
 
+
+
+### 🎨 Setting Up `shadcn/ui`  
+
+#### **1. Initialize `shadcn/ui`**  
+Run the following command in your Next.js project directory:  
+```sh
+pnpm dlx shadcn@latest init
+```
+
+
+
+
+
+
