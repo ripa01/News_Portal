@@ -10,11 +10,14 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
-import { IoMenu } from "react-icons/io5";
+
 import Link from "next/link";
+import MobileMenu from "./MobileMenu";
+
 
 const Navbar = () => {
   const pathname = usePathname();
+ 
 
   return (
     <header className="bg-white text-black py-4 shadow-md">
@@ -23,7 +26,7 @@ const Navbar = () => {
         <div className="text-xl font-bold">
           <Link href="/">News Portal</Link>
         </div>
-
+<div>
         {/* Desktop Navigation */}
         <NavigationMenu className="hidden lg:flex">
           <NavigationMenuList className="flex items-center space-x-4">
@@ -93,18 +96,15 @@ const Navbar = () => {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
+        </div>
 
-        {/* Right Side (Login Button) */}
-        <div className="hidden lg:flex items-center space-x-4">
+       
+        <MobileMenu />
+         {/* Right Side (Login Button) */}
+         <div className="hidden lg:flex items-center space-x-4">
           <Button variant="default">Log in</Button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <div className="lg:hidden">
-          <Button>
-            <IoMenu />
-          </Button>
-        </div>
       </nav>
     </header>
   );
