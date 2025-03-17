@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NewsPage = ({children}: {children: React.ReactNode}) => {
+const NewsPage = () => {
   return (
     <div>
       newspage
