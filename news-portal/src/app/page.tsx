@@ -20,8 +20,7 @@ interface Article {
 
 export default function Home() {
   const [news, setNews] = useState<Article[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+ 
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -35,11 +34,9 @@ export default function Home() {
         const data = await response.json();
         console.log(data);
         setNews(data?.articles || []);
-      } catch (error) {
-        setError("Error fetching news");
-      } finally {
-        setLoading(false);
-      }
+      } catch {
+        console.log("Error fetching news");
+      } 
     };
 
     fetchNews();
@@ -51,11 +48,7 @@ export default function Home() {
       <div className="my-12">
         <h2 className="text-2xl font-bold mb-8">Top Headlines</h2>
 
-        {loading ? (
-          <p>Loading news...</p>
-        ) : error ? (
-          <p className="text-red-500">{error}</p>
-        ) : (
+      
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {news.map((article, index) => (
               <NewsCard
@@ -67,7 +60,7 @@ export default function Home() {
               />
             ))}
           </div>
-        )}
+
       </div>
     </div>
   );
