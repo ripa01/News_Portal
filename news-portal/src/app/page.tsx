@@ -26,7 +26,7 @@ export default function Home() {
   useEffect(() => {
     const fetchNews = async () => {
       const url =
-        "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=541907eefc1c46d2868b432fc9ee7d4d";
+     "https://newsapi.org/v2/top-headlines?country=us&apiKey=541907eefc1c46d2868b432fc9ee7d4d";
 
       try {
         const response = await fetch(url);
@@ -49,7 +49,7 @@ export default function Home() {
     <div className="py-12">
       <Banner />
       <div className="my-12">
-        <h2 className="text-2xl font-bold mb-8">Latest News</h2>
+        <h2 className="text-2xl font-bold mb-8">Top Headlines</h2>
 
         {loading ? (
           <p>Loading news...</p>
