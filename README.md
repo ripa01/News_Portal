@@ -1,5 +1,24 @@
 # News_Portal
 
+## Overview
+This is a **simple News application** built using **Next.js** that fetches and displays top news headlines from the [NewsAPI](https://newsapi.org/). Users can browse the latest news and click the **Read More** button to visit the full article on the original news website.
+
+This project helped me learn:
+- How **Next.js routing** works
+- About **page layouts**
+- The **basic file structure** in Next.js
+
+## Website Preview
+
+### Home Page
+<img src="preview/ss1.png">
+
+### About Page
+<img src="preview/ss2.png">
+
+### Contact Page
+<img src="preview/ss3.png" >
+
 
 ### 🚀 Getting Started  
 
@@ -36,6 +55,15 @@ Run the following command in your Next.js project directory:
 ```sh
 pnpm dlx shadcn@latest init
 ```
+
+
+## API Used
+This app fetches news from the **NewsAPI**:
+```
+https://newsapi.org/v2/top-headlines?country=us&apiKey=YOUR_API_KEY
+```
+Replace `YOUR_API_KEY` with your actual API key.
+
 
 
 
